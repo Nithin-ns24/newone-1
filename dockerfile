@@ -15,7 +15,7 @@ RUN apt-get install unzip -y
 
 WORKDIR /home/ubuntu/docker
 
-RUN wget https://github.com/Nithin-optit/play-1/archive/refs/heads/master.zip
+RUN wget https://github.com/Nithin-optit/newone-1/archive/refs/heads/master.zip
 
 RUN unzip master.zip
 
