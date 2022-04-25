@@ -13,7 +13,7 @@ RUN apt-get install wget -y
 RUN apt-get install -y git
 RUN apt-get install unzip -y
 
-WORKDIR /home/ubuntu/docker
+WORKDIR /home/ubuntu/Docker
 
 RUN wget https://github.com/Nithin-optit/newone-1/archive/refs/heads/master.zip
 
