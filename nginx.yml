@@ -29,5 +29,5 @@ spec:
     app: nginx
   ports:
   - port: 80
-    nodePort: 31702
+    nodePort: 31240
     name: http
