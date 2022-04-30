@@ -14,7 +14,7 @@ RUN apt-get install -y git
 
 WORKDIR /home/ubuntu/Docker
 
-RUN git clone https://github.com/Nithin-optit/newone-1/blob/master/yml ansible playbook.yml
+RUN git clone https://github.com/Nithin-optit/newone-1.git
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive \
