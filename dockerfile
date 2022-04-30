@@ -11,13 +11,10 @@ RUN apt-get update && \
 RUN apt-get update -y
 RUN apt-get install wget -y
 RUN apt-get install -y git
-RUN apt-get install unzip -y
 
 WORKDIR /home/ubuntu/Docker
 
-RUN wget https://github.com/Nithin-optit/newone-1/archive/refs/heads/master.zip
-
-RUN unzip master.zip
+RUN git clone https://github.com/Nithin-optit/newone-1.git
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive \
