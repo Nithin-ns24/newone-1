@@ -17,3 +17,7 @@
       package: name=php-mysql state=present
     - name: "Install mysqlserver"
       package: name=mysql-server state=present
+      
+      server:
+         port: 8085
+         
