@@ -24,7 +24,7 @@ RUN apt-get update \
  
  WORKDIR /home/ubuntu
 
-EXPOSE 8085
+EXPOSE 8086
 
 
 
