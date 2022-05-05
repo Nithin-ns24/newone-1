@@ -1,16 +1,7 @@
 ---
- - hosts: localhost
+ - hosts: 172.31.24.127
    become: true
    tasks:
-    - name: create a dockerfile
-      shell: sudo docker build -t stackimage:1.0 .
-    - name: docker tag
-      shell: docker tag stackimage:1.0 nithin246/stackimage1
-    - name: Log into DockerHub
-      docker_login:
-        username: nithin246
-        password: 9845617126
-        email: nithinnith24@gmail.com
     - name: push image
       shell: docker push nithin246/stackimage1
     - name: pull image
