@@ -2,6 +2,8 @@
 FROM ubuntu:latest
 MAINTAINER nithin246
 
+WORKDIR /home/ubuntu/newone-1
+
 RUN apt-get update
 RUN apt-get install -y apache2
 RUN mkdir -p /var/lock/apache2
