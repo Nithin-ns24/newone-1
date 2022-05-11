@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 MAINTAINER nithin246
 
-WORKDIR /home/ubuntu/newone-1
+WORKDIR /home/ubuntu/docker
 
 RUN apt-get update
 RUN apt-get install -y apache2
