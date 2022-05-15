@@ -1,0 +1,24 @@
+---
+- name: install tomcat server
+  hosts: server1
+  remote_user: ec2_user
+  become: true
+  vars_files:
+    - tomcat_vars
+
+  tasks:
+  - name: download tomcat server packages
+    get_url:
+      url: "{{ tomcat_url }}"
+      dest: "{{ dest }}"
+  - name: extract tomcat package
+    unarchive:
+      src: /usr/local/{{ tomcat_package }}.tar.gz
+      dest: "{{ dest }}"
+      remote_src: yes
+  - name: start tomcat services
+    shell: nohup /usr/local/{{ tomcat_package }}/bin/startup.sh
+  - name: copying files
+    copy:
+      src: index.html
+      dest: "{{ dest }}/index.html"
